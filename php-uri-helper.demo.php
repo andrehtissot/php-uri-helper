@@ -77,15 +77,18 @@ include 'php-uri-helper.php';
             </tr>
         </tbody>
     </table>
-    <? foreach (array('generateFromApplicationRoot()' => URIHelper::generateFromApplicationRoot(),
-        'generateFromCurrent()' => URIHelper::generateFromCurrent(),
+    <? foreach (array('generateFromApplicationRoot()' =>
+            URIHelper::generateFromApplicationRoot(),
+        'generateFromCurrent()' =>
+            URIHelper::generateFromCurrent(),
         'from("https://github.com/andrehtissot/php-uri-helper")' =>
             URIHelper::from("https://github.com/andrehtissot/php-uri-helper"),
         'from("https://secure.php.net/manual/pt_BR/ini.core.php?tst=1#ini.always-populate-raw-post-data")' =>
             URIHelper::from("https://secure.php.net/manual/pt_BR/ini.core.php?tst=1#ini.always-populate-raw-post-data"),
-            'from(URIHelper::currentFull())' => URIHelper::from(URIHelper::currentFull()),
-        'from(URIHelper::currentApplicationRoot())' => URIHelper::from(URIHelper::currentApplicationRoot()) )
-        as $gerenerationMethod => $URIObject) { ?>
+        'from(URIHelper::currentFull())' =>
+            URIHelper::from(URIHelper::currentFull()),
+        'from(URIHelper::currentApplicationRoot())' =>
+            URIHelper::from(URIHelper::currentApplicationRoot())) as $gerenerationMethod => $URIObject) { ?>
         <h4>
             Methods from <pre>URIObject</pre> gerenerated with:
             <pre>URIHelper::<?= $gerenerationMethod ?></pre>
